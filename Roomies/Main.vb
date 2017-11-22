@@ -9,8 +9,19 @@ Public Class Main
     End Sub
 
     Private Sub btnUserA_Click(sender As Object, e As EventArgs) Handles btnUserA.Click
-        CreateProfile.Show()
+        Dim CreateAdminProfile = New CreateProfile
+        CreateAdminProfile.rdbAdmin.Checked() = True
+        CreateAdminProfile.Location = New Point((My.Computer.Screen.Bounds.Size.Width / 2) - (Me.Width / 2) - 500, (My.Computer.Screen.Bounds.Size.Height / 2) - (Me.Height / 2) - 20)
+        CreateAdminProfile.Show()
         ' Dim AdminMain As New AdminApp.AdminCreateHousehold
         ' AdminMain.Show()
+    End Sub
+
+    Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
+        Dim CreateRegularProfile = New CreateProfile
+
+        CreateRegularProfile.rdbRegular.Checked() = True
+        CreateRegularProfile.Location = New Point((My.Computer.Screen.Bounds.Size.Width / 2) - (Me.Width / 2) + 500, (My.Computer.Screen.Bounds.Size.Height / 2) - (Me.Height / 2) - 20)
+        CreateRegularProfile.Show()
     End Sub
 End Class

@@ -234,6 +234,7 @@ Partial Class CreateProfile
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "CreateProfile"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Create Profile"
         CType(Me.pbUserPic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

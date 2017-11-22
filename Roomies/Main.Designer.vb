@@ -22,23 +22,12 @@ Partial Class Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.btnUserA = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.btnUser = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.lblLogin = New MaterialSkin.Controls.MaterialLabel()
+        Me.pbLogo = New System.Windows.Forms.PictureBox()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pbLogo
-        '
-        Me.pbLogo.BackColor = System.Drawing.Color.White
-        Me.pbLogo.Image = Global.Roomies.My.Resources.Resources.home
-        Me.pbLogo.Location = New System.Drawing.Point(103, 104)
-        Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(186, 121)
-        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbLogo.TabIndex = 0
-        Me.pbLogo.TabStop = False
         '
         'btnUserA
         '
@@ -72,14 +61,25 @@ Partial Class Main
         '
         Me.lblLogin.AutoSize = True
         Me.lblLogin.Depth = 0
-        Me.lblLogin.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.lblLogin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblLogin.Location = New System.Drawing.Point(150, 288)
         Me.lblLogin.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblLogin.Name = "lblLogin"
-        Me.lblLogin.Size = New System.Drawing.Size(72, 19)
+        Me.lblLogin.Size = New System.Drawing.Size(69, 18)
         Me.lblLogin.TabIndex = 4
         Me.lblLogin.Text = "Login As:"
+        '
+        'pbLogo
+        '
+        Me.pbLogo.BackColor = System.Drawing.Color.White
+        Me.pbLogo.Image = Global.Roomies.My.Resources.Resources.home
+        Me.pbLogo.Location = New System.Drawing.Point(103, 104)
+        Me.pbLogo.Name = "pbLogo"
+        Me.pbLogo.Size = New System.Drawing.Size(186, 121)
+        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbLogo.TabIndex = 0
+        Me.pbLogo.TabStop = False
         '
         'Main
         '
