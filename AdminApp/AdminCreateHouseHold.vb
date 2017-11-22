@@ -43,8 +43,8 @@ Public Class AdminCreateHousehold
         file.WriteLine(txtWashrooms.Text)
         file.Close()
 
-        Dim FileToSaveAs As String = System.IO.Path.Combine(directory, "Household")
-        pbHouseImage.Image.Save(FileToSaveAs, System.Drawing.Imaging.ImageFormat.Jpeg)
+        Dim FileToSaveAs As String = System.IO.Path.Combine(directory, "Household.png")
+        pbHouseImage.Image.Save(FileToSaveAs, System.Drawing.Imaging.ImageFormat.Png)
 
 
         Dim controlsContainer As Panel = UserManager.controlsContainer
