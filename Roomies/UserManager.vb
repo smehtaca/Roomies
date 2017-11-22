@@ -32,4 +32,12 @@ Public Class UserManager
         End Set
     End Property
 
+    Private Sub btnAcceptRoomate_Click(sender As Object, e As EventArgs) Handles btnAcceptRoomate.Click
+
+    End Sub
+
+    Private Sub btnInvite_Click(sender As Object, e As EventArgs) Handles btnInvite.Click
+        Dim err = New PopUp
+        err.Show()
+    End Sub
 End Class

@@ -60,7 +60,7 @@ Public Class CreateProfile
 
         If rdbAdmin.Checked = True Then
             FadingForm()
-            Dim AdminMain As New AdminApp.AdminCreateHousehold
+            Dim AdminMain As New AdminCreateHousehold()
             AdminMain.Show()
         Else
             Dim controlsContainer As Panel = RequestAccess.controlsContainer

@@ -24,7 +24,7 @@ Public Class RequestAccess
     End Property
     Private Sub btnReqAccess_Click(sender As Object, e As EventArgs) Handles btnReqAccess.Click
 
-        Dim req As New AdminApp.UserManager
+        Dim req As New UserManager()
         req.ReqRecieved = userName
         Console.WriteLine(userName)
     End Sub

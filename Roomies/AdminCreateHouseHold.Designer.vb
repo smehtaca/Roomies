@@ -178,7 +178,7 @@ Partial Class AdminCreateHousehold
         '
         Me.pbHouseImage.BackColor = System.Drawing.Color.White
         Me.pbHouseImage.Cursor = System.Windows.Forms.Cursors.Default
-        Me.pbHouseImage.Image = Global.AdminApp.My.Resources.Resources.houseDefault
+        Me.pbHouseImage.Image = My.Resources.Resources.houseDefault
         Me.pbHouseImage.Location = New System.Drawing.Point(64, 145)
         Me.pbHouseImage.Name = "pbHouseImage"
         Me.pbHouseImage.Size = New System.Drawing.Size(277, 156)

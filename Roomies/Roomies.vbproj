@@ -75,6 +75,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminCreateHouseHold.Designer.vb">
+      <DependentUpon>AdminCreateHouseHold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateHouseHold.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateProfile.Designer.vb">
       <DependentUpon>CreateProfile.vb</DependentUpon>
     </Compile>
@@ -115,8 +121,17 @@
     <Compile Include="RequestAccess.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserManager.Designer.vb">
+      <DependentUpon>UserManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminCreateHouseHold.resx">
+      <DependentUpon>AdminCreateHouseHold.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateProfile.resx">
       <DependentUpon>CreateProfile.vb</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RequestAccess.resx">
       <DependentUpon>RequestAccess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager.resx">
+      <DependentUpon>UserManager.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -153,13 +171,10 @@
     <None Include="Resources\home.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AdminApp\AdminApp.vbproj">
-      <Project>{5086cd9d-6a26-42c7-958a-efd5d30a5b62}</Project>
-      <Name>AdminApp</Name>
-    </ProjectReference>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user.png" />
+    <None Include="Resources\houseDefault.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
