@@ -46,8 +46,12 @@ Public Class CreateProfile
         Dim file As System.IO.StreamWriter
         Dim userDir = dir & "\Users\"
         Dim di As DirectoryInfo = Directory.CreateDirectory(userDir)
+        If rdbAdmin.Checked = True Then
+            file = My.Computer.FileSystem.OpenTextFileWriter(userDir & "Admin" & ".txt", False)
+        Else
+            file = My.Computer.FileSystem.OpenTextFileWriter(userDir & "Regular_User" & ".txt", False)
+        End If
 
-        file = My.Computer.FileSystem.OpenTextFileWriter(userDir & txtUserName.Text & ".txt", False)
         file.WriteLine(txtUserName.Text)
         file.WriteLine(txtEmail.Text)
         file.WriteLine(txtPhoneNumber.Text)
