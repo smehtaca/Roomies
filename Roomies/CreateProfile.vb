@@ -1,4 +1,6 @@
 ﻿Imports MaterialSkin
+Imports System
+Imports System.IO
 Public Class CreateProfile
     Inherits MaterialSkin.Controls.MaterialForm
     Private Sub CreateProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -35,8 +37,26 @@ Public Class CreateProfile
 
     Private Sub btnCreateUser_Click(sender As Object, e As EventArgs) Handles btnCreateUser.Click
 
-        Dim directory As String = My.Application.Info.DirectoryPath
-        Dim FileToSaveAs As String = System.IO.Path.Combine(directory, txtUserName.Text & ".png")
-        pbUserPic.Image.Save(FileToSaveAs, System.Drawing.Imaging.ImageFormat.Png)
+        Dim dir As String = My.Application.Info.DirectoryPath
+        If txtUserName.Text IsNot "" Then
+            Dim FileToSaveAs As String = System.IO.Path.Combine(dir, txtUserName.Text & ".png")
+            pbUserPic.Image.Save(FileToSaveAs, System.Drawing.Imaging.ImageFormat.Png)
+        End If
+
+        Dim file As System.IO.StreamWriter
+        Dim userDir = dir & "\Users\"
+        Dim di As DirectoryInfo = Directory.CreateDirectory(userDir)
+
+        file = My.Computer.FileSystem.OpenTextFileWriter(userDir & txtUserName.Text & ".txt", False)
+        file.WriteLine(txtUserName.Text)
+        file.WriteLine(txtEmail.Text)
+        file.WriteLine(txtPhoneNumber.Text)
+        If rdbAdmin.Checked = True Then
+            file.WriteLine(rdbAdmin.Text)
+        Else
+            file.WriteLine(rdbRegular.Text)
+        End If
+        file.Close()
+
     End Sub
 End Class
