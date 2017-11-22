@@ -22,7 +22,6 @@ Partial Class AdminCreateHousehold
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblHouseHoldImage = New MaterialSkin.Controls.MaterialLabel()
-        Me.pbHouseImage = New System.Windows.Forms.PictureBox()
         Me.lblHouseName = New MaterialSkin.Controls.MaterialLabel()
         Me.lblAddress = New MaterialSkin.Controls.MaterialLabel()
         Me.lblRooms = New MaterialSkin.Controls.MaterialLabel()
@@ -32,6 +31,7 @@ Partial Class AdminCreateHousehold
         Me.txtRooms = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txtAddress = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txtWashrooms = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.pbHouseImage = New System.Windows.Forms.PictureBox()
         CType(Me.pbHouseImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,37 +39,25 @@ Partial Class AdminCreateHousehold
         '
         Me.lblHouseHoldImage.AutoSize = True
         Me.lblHouseHoldImage.Depth = 0
-        Me.lblHouseHoldImage.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblHouseHoldImage.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.lblHouseHoldImage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblHouseHoldImage.Location = New System.Drawing.Point(138, 92)
         Me.lblHouseHoldImage.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblHouseHoldImage.Name = "lblHouseHoldImage"
-        Me.lblHouseHoldImage.Size = New System.Drawing.Size(137, 19)
+        Me.lblHouseHoldImage.Size = New System.Drawing.Size(136, 18)
         Me.lblHouseHoldImage.TabIndex = 0
         Me.lblHouseHoldImage.Text = "Drag House Image:"
-        '
-        'pbHouseImage
-        '
-        Me.pbHouseImage.BackColor = System.Drawing.Color.GhostWhite
-        Me.pbHouseImage.Cursor = System.Windows.Forms.Cursors.Default
-        Me.pbHouseImage.Image = Global.AdminApp.My.Resources.Resources.houseDefault
-        Me.pbHouseImage.Location = New System.Drawing.Point(64, 145)
-        Me.pbHouseImage.Name = "pbHouseImage"
-        Me.pbHouseImage.Size = New System.Drawing.Size(277, 156)
-        Me.pbHouseImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbHouseImage.TabIndex = 1
-        Me.pbHouseImage.TabStop = False
         '
         'lblHouseName
         '
         Me.lblHouseName.AutoSize = True
         Me.lblHouseName.Depth = 0
-        Me.lblHouseName.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblHouseName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.lblHouseName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblHouseName.Location = New System.Drawing.Point(22, 341)
         Me.lblHouseName.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblHouseName.Name = "lblHouseName"
-        Me.lblHouseName.Size = New System.Drawing.Size(53, 19)
+        Me.lblHouseName.Size = New System.Drawing.Size(52, 18)
         Me.lblHouseName.TabIndex = 2
         Me.lblHouseName.Text = "Name:"
         '
@@ -77,12 +65,12 @@ Partial Class AdminCreateHousehold
         '
         Me.lblAddress.AutoSize = True
         Me.lblAddress.Depth = 0
-        Me.lblAddress.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.lblAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblAddress.Location = New System.Drawing.Point(22, 391)
         Me.lblAddress.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblAddress.Name = "lblAddress"
-        Me.lblAddress.Size = New System.Drawing.Size(68, 19)
+        Me.lblAddress.Size = New System.Drawing.Size(66, 18)
         Me.lblAddress.TabIndex = 3
         Me.lblAddress.Text = "Address:"
         '
@@ -90,12 +78,12 @@ Partial Class AdminCreateHousehold
         '
         Me.lblRooms.AutoSize = True
         Me.lblRooms.Depth = 0
-        Me.lblRooms.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblRooms.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.lblRooms.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblRooms.Location = New System.Drawing.Point(22, 440)
         Me.lblRooms.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblRooms.Name = "lblRooms"
-        Me.lblRooms.Size = New System.Drawing.Size(92, 19)
+        Me.lblRooms.Size = New System.Drawing.Size(91, 18)
         Me.lblRooms.TabIndex = 4
         Me.lblRooms.Text = "# of Rooms:"
         '
@@ -103,12 +91,12 @@ Partial Class AdminCreateHousehold
         '
         Me.lblWashrooms.AutoSize = True
         Me.lblWashrooms.Depth = 0
-        Me.lblWashrooms.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblWashrooms.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.lblWashrooms.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblWashrooms.Location = New System.Drawing.Point(22, 487)
         Me.lblWashrooms.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblWashrooms.Name = "lblWashrooms"
-        Me.lblWashrooms.Size = New System.Drawing.Size(125, 19)
+        Me.lblWashrooms.Size = New System.Drawing.Size(124, 18)
         Me.lblWashrooms.TabIndex = 5
         Me.lblWashrooms.Text = "# of Washrooms:"
         '
@@ -183,6 +171,18 @@ Partial Class AdminCreateHousehold
         Me.txtWashrooms.Size = New System.Drawing.Size(212, 23)
         Me.txtWashrooms.TabIndex = 9
         Me.txtWashrooms.UseSystemPasswordChar = False
+        '
+        'pbHouseImage
+        '
+        Me.pbHouseImage.BackColor = System.Drawing.Color.White
+        Me.pbHouseImage.Cursor = System.Windows.Forms.Cursors.Default
+        Me.pbHouseImage.Image = Global.AdminApp.My.Resources.Resources.houseDefault
+        Me.pbHouseImage.Location = New System.Drawing.Point(64, 145)
+        Me.pbHouseImage.Name = "pbHouseImage"
+        Me.pbHouseImage.Size = New System.Drawing.Size(277, 156)
+        Me.pbHouseImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbHouseImage.TabIndex = 1
+        Me.pbHouseImage.TabStop = False
         '
         'AdminCreateHousehold
         '

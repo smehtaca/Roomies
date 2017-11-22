@@ -13,7 +13,7 @@ Public Class AdminCreateHousehold
         AddHandler Me.DragEnter, AddressOf Form_DragEnter
 
         Me.Location = New Point((My.Computer.Screen.Bounds.Size.Width / 2) - (Me.Width / 2) - 500, (My.Computer.Screen.Bounds.Size.Height / 2) - (Me.Height / 2) - 20)
-        Console.WriteLine(Me.Location)
+
     End Sub
 
     Private Sub Form_DragDrop(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs)
@@ -43,11 +43,15 @@ Public Class AdminCreateHousehold
         file.WriteLine(txtWashrooms.Text)
         file.Close()
 
-        Dim container As Panel = UserManager.Container
+        Dim FileToSaveAs As String = System.IO.Path.Combine(directory, "Household")
+        pbHouseImage.Image.Save(FileToSaveAs, System.Drawing.Imaging.ImageFormat.Jpeg)
+
+
+        Dim controlsContainer As Panel = UserManager.controlsContainer
         Me.Controls.Clear()
-        Me.Controls.Add(container)
+        Me.Controls.Add(controlsContainer)
         For i As Integer = Me.ClientRectangle.Width To 0 Step -1
-            container.Left = i
+            controlsContainer.Left = i
             Me.Refresh()
             Me.Text = "Invite or Accept Users"
         Next i

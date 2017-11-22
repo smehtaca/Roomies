@@ -22,7 +22,7 @@ Partial Class UserManager
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Container = New System.Windows.Forms.Panel()
+        Me.controlsContainer = New System.Windows.Forms.Panel()
         Me.lblInvite = New MaterialSkin.Controls.MaterialLabel()
         Me.txtInvitedUser = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.lblAcceptUsers = New MaterialSkin.Controls.MaterialLabel()
@@ -31,24 +31,24 @@ Partial Class UserManager
         Me.rdbAccept = New MaterialSkin.Controls.MaterialRadioButton()
         Me.lblUserB = New MaterialSkin.Controls.MaterialLabel()
         Me.rdbDecline = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.Container.SuspendLayout()
+        Me.controlsContainer.SuspendLayout()
         Me.SuspendLayout()
         '
         'Container
         '
-        Me.Container.BackColor = System.Drawing.Color.White
-        Me.Container.Controls.Add(Me.rdbDecline)
-        Me.Container.Controls.Add(Me.lblUserB)
-        Me.Container.Controls.Add(Me.rdbAccept)
-        Me.Container.Controls.Add(Me.btnAcceptRoomate)
-        Me.Container.Controls.Add(Me.btnInvite)
-        Me.Container.Controls.Add(Me.lblAcceptUsers)
-        Me.Container.Controls.Add(Me.txtInvitedUser)
-        Me.Container.Controls.Add(Me.lblInvite)
-        Me.Container.Location = New System.Drawing.Point(0, 63)
-        Me.Container.Name = "Container"
-        Me.Container.Size = New System.Drawing.Size(404, 498)
-        Me.Container.TabIndex = 0
+        Me.controlsContainer.BackColor = System.Drawing.Color.White
+        Me.controlsContainer.Controls.Add(Me.rdbDecline)
+        Me.controlsContainer.Controls.Add(Me.lblUserB)
+        Me.controlsContainer.Controls.Add(Me.rdbAccept)
+        Me.controlsContainer.Controls.Add(Me.btnAcceptRoomate)
+        Me.controlsContainer.Controls.Add(Me.btnInvite)
+        Me.controlsContainer.Controls.Add(Me.lblAcceptUsers)
+        Me.controlsContainer.Controls.Add(Me.txtInvitedUser)
+        Me.controlsContainer.Controls.Add(Me.lblInvite)
+        Me.controlsContainer.Location = New System.Drawing.Point(0, 63)
+        Me.controlsContainer.Name = "Container"
+        Me.controlsContainer.Size = New System.Drawing.Size(404, 498)
+        Me.controlsContainer.TabIndex = 0
         '
         'lblInvite
         '
@@ -168,18 +168,18 @@ Partial Class UserManager
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(404, 562)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Container)
+        Me.Controls.Add(Me.controlsContainer)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "UserManager"
         Me.Text = "UserManager"
-        Me.Container.ResumeLayout(False)
-        Me.Container.PerformLayout()
+        Me.controlsContainer.ResumeLayout(False)
+        Me.controlsContainer.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Container As Panel
+    Friend WithEvents controlsContainer As Panel
     Friend WithEvents txtInvitedUser As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents lblInvite As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents lblAcceptUsers As MaterialSkin.Controls.MaterialLabel

@@ -9,7 +9,8 @@ Public Class Main
     End Sub
 
     Private Sub btnUserA_Click(sender As Object, e As EventArgs) Handles btnUserA.Click
-        Dim AdminMain As New AdminApp.AdminCreateHousehold
-        AdminMain.Show()
+        CreateProfile.Show()
+        ' Dim AdminMain As New AdminApp.AdminCreateHousehold
+        ' AdminMain.Show()
     End Sub
 End Class
