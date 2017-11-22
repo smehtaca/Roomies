@@ -24,9 +24,9 @@ Partial Class RequestAccess
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.controlsContainer = New System.Windows.Forms.Panel()
-        Me.lblReqAccess = New MaterialSkin.Controls.MaterialLabel()
-        Me.txtHouseHold = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.btnReqAccess = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.txtHouseHold = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.lblReqAccess = New MaterialSkin.Controls.MaterialLabel()
         Me.tipHouse = New System.Windows.Forms.ToolTip(Me.components)
         Me.controlsContainer.SuspendLayout()
         Me.SuspendLayout()
@@ -42,18 +42,17 @@ Partial Class RequestAccess
         Me.controlsContainer.Size = New System.Drawing.Size(404, 498)
         Me.controlsContainer.TabIndex = 0
         '
-        'lblReqAccess
+        'btnReqAccess
         '
-        Me.lblReqAccess.AutoSize = True
-        Me.lblReqAccess.Depth = 0
-        Me.lblReqAccess.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.lblReqAccess.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblReqAccess.Location = New System.Drawing.Point(151, 107)
-        Me.lblReqAccess.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lblReqAccess.Name = "lblReqAccess"
-        Me.lblReqAccess.Size = New System.Drawing.Size(116, 18)
-        Me.lblReqAccess.TabIndex = 0
-        Me.lblReqAccess.Text = "Join Household:"
+        Me.btnReqAccess.Depth = 0
+        Me.btnReqAccess.Location = New System.Drawing.Point(103, 245)
+        Me.btnReqAccess.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnReqAccess.Name = "btnReqAccess"
+        Me.btnReqAccess.Primary = True
+        Me.btnReqAccess.Size = New System.Drawing.Size(204, 23)
+        Me.btnReqAccess.TabIndex = 2
+        Me.btnReqAccess.Text = "Join Household"
+        Me.btnReqAccess.UseVisualStyleBackColor = True
         '
         'txtHouseHold
         '
@@ -70,17 +69,18 @@ Partial Class RequestAccess
         Me.txtHouseHold.TabIndex = 1
         Me.txtHouseHold.UseSystemPasswordChar = False
         '
-        'btnReqAccess
+        'lblReqAccess
         '
-        Me.btnReqAccess.Depth = 0
-        Me.btnReqAccess.Location = New System.Drawing.Point(103, 245)
-        Me.btnReqAccess.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btnReqAccess.Name = "btnReqAccess"
-        Me.btnReqAccess.Primary = True
-        Me.btnReqAccess.Size = New System.Drawing.Size(204, 23)
-        Me.btnReqAccess.TabIndex = 2
-        Me.btnReqAccess.Text = "Join Household"
-        Me.btnReqAccess.UseVisualStyleBackColor = True
+        Me.lblReqAccess.AutoSize = True
+        Me.lblReqAccess.Depth = 0
+        Me.lblReqAccess.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblReqAccess.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblReqAccess.Location = New System.Drawing.Point(151, 107)
+        Me.lblReqAccess.MouseState = MaterialSkin.MouseState.HOVER
+        Me.lblReqAccess.Name = "lblReqAccess"
+        Me.lblReqAccess.Size = New System.Drawing.Size(119, 19)
+        Me.lblReqAccess.TabIndex = 0
+        Me.lblReqAccess.Text = "Join Household:"
         '
         'RequestAccess
         '
@@ -90,6 +90,7 @@ Partial Class RequestAccess
         Me.ControlBox = False
         Me.Controls.Add(Me.controlsContainer)
         Me.Name = "RequestAccess"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Request Access"
         Me.controlsContainer.ResumeLayout(False)
         Me.controlsContainer.PerformLayout()

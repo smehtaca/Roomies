@@ -4,7 +4,7 @@ Public Class UserManager
 
     Private requested As String
     Private Sub UserManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        requested = ""
+
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT

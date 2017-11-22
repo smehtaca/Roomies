@@ -64,13 +64,11 @@ Public Class CreateProfile
             AdminMain.Show()
         Else
             Dim controlsContainer As Panel = RequestAccess.controlsContainer
-            Me.Controls.Clear()
-            Me.Controls.Add(controlsContainer)
-            For i As Integer = Me.ClientRectangle.Width To 0 Step -1
-                controlsContainer.Left = i
-                Me.Refresh()
-                Me.Text = "Join Household"
-            Next i
+            Dim req As New RequestAccess
+            req.NameRecieved = lblUserName.Text
+
+            FadingForm()
+            req.Show()
         End If
 
 

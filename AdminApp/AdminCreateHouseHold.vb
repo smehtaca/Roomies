@@ -46,19 +46,32 @@ Public Class AdminCreateHousehold
 
         Dim FileToSaveAs As String = System.IO.Path.Combine(directory, "Household.png")
         pbHouseImage.Image.Save(FileToSaveAs, System.Drawing.Imaging.ImageFormat.Png)
-        Me.Hide()
-        Threading.Thread.Sleep(4)
+        FadingForm()
+
         UserManager.Show()
 
-        'Removed animation
-        'Dim controlsContainer As Panel = UserManager.controlsContainer
-        'Me.Controls.Clear()
-        'Me.Controls.Add(controlsContainer)
-        'For i As Integer = Me.ClientRectangle.Width To 0 Step -1
-        '   controlsContainer.Left = i
-        '   Me.Refresh()
-        '   Me.Text = "Invite or Accept Users"
-        'Next i
+
+    End Sub
+    Private Sub FadingForm()
+        Dim iCount As Integer
+
+
+        For iCount = 90 To 10 Step -10
+
+
+            Me.Opacity = iCount / 100
+
+
+            Me.Refresh()
+
+
+            Threading.Thread.Sleep(25)
+
+
+        Next
+
+
+        Me.Hide()
 
 
     End Sub
