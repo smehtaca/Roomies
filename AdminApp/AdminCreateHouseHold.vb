@@ -14,6 +14,7 @@ Public Class AdminCreateHousehold
 
         Me.Location = New Point((My.Computer.Screen.Bounds.Size.Width / 2) - (Me.Width / 2) - 500, (My.Computer.Screen.Bounds.Size.Height / 2) - (Me.Height / 2) - 20)
 
+        tipDragHouseHoldImage.SetToolTip(Me.pbHouseImage, "Drag Household image to replace default")
     End Sub
 
     Private Sub Form_DragDrop(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs)
@@ -45,16 +46,19 @@ Public Class AdminCreateHousehold
 
         Dim FileToSaveAs As String = System.IO.Path.Combine(directory, "Household.png")
         pbHouseImage.Image.Save(FileToSaveAs, System.Drawing.Imaging.ImageFormat.Png)
+        Me.Hide()
+        Threading.Thread.Sleep(4)
+        UserManager.Show()
 
-
-        Dim controlsContainer As Panel = UserManager.controlsContainer
-        Me.Controls.Clear()
-        Me.Controls.Add(controlsContainer)
-        For i As Integer = Me.ClientRectangle.Width To 0 Step -1
-            controlsContainer.Left = i
-            Me.Refresh()
-            Me.Text = "Invite or Accept Users"
-        Next i
+        'Removed animation
+        'Dim controlsContainer As Panel = UserManager.controlsContainer
+        'Me.Controls.Clear()
+        'Me.Controls.Add(controlsContainer)
+        'For i As Integer = Me.ClientRectangle.Width To 0 Step -1
+        '   controlsContainer.Left = i
+        '   Me.Refresh()
+        '   Me.Text = "Invite or Accept Users"
+        'Next i
 
 
     End Sub

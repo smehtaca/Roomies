@@ -9,7 +9,7 @@ Public Class CreateProfile
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE)
 
-
+        Me.Opacity = 0.99
 
         tipDragImage.SetToolTip(Me.pbUserPic, "Drag Image to change picture")
 
@@ -57,6 +57,45 @@ Public Class CreateProfile
             file.WriteLine(rdbRegular.Text)
         End If
         file.Close()
+
+        If rdbAdmin.Checked = True Then
+            FadingForm()
+            Dim AdminMain As New AdminApp.AdminCreateHousehold
+            AdminMain.Show()
+        Else
+            Dim controlsContainer As Panel = RequestAccess.controlsContainer
+            Me.Controls.Clear()
+            Me.Controls.Add(controlsContainer)
+            For i As Integer = Me.ClientRectangle.Width To 0 Step -1
+                controlsContainer.Left = i
+                Me.Refresh()
+                Me.Text = "Join Household"
+            Next i
+        End If
+
+
+    End Sub
+    Private Sub FadingForm()
+        Dim iCount As Integer
+
+
+        For iCount = 90 To 10 Step -10
+
+
+            Me.Opacity = iCount / 100
+
+
+            Me.Refresh()
+
+
+            Threading.Thread.Sleep(25)
+
+
+        Next
+
+
+        Me.Hide()
+
 
     End Sub
 End Class

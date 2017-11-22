@@ -21,6 +21,7 @@ Partial Class AdminCreateHousehold
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblHouseHoldImage = New MaterialSkin.Controls.MaterialLabel()
         Me.lblHouseName = New MaterialSkin.Controls.MaterialLabel()
         Me.lblAddress = New MaterialSkin.Controls.MaterialLabel()
@@ -32,6 +33,7 @@ Partial Class AdminCreateHousehold
         Me.txtAddress = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txtWashrooms = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.pbHouseImage = New System.Windows.Forms.PictureBox()
+        Me.tipDragHouseHoldImage = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.pbHouseImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -222,4 +224,5 @@ Partial Class AdminCreateHousehold
     Friend WithEvents txtRooms As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txtAddress As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txtWashrooms As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents tipDragHouseHoldImage As ToolTip
 End Class

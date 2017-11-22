@@ -103,6 +103,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PopUp.Designer.vb">
+      <DependentUpon>PopUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestAccess.Designer.vb">
+      <DependentUpon>RequestAccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RequestAccess.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CreateProfile.resx">
@@ -116,6 +128,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp.resx">
+      <DependentUpon>PopUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestAccess.resx">
+      <DependentUpon>RequestAccess.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
