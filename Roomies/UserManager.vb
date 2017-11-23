@@ -33,9 +33,10 @@ Public Class UserManager
     End Property
 
     Private Sub btnAcceptRoomate_Click(sender As Object, e As EventArgs) Handles btnAcceptRoomate.Click
-        FadingForm()
-        Home.Show()
-
+        Dim admHome = New Home()
+        admHome.Location = Me.Location
+        admHome.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnInvite_Click(sender As Object, e As EventArgs) Handles btnInvite.Click
@@ -43,27 +44,5 @@ Public Class UserManager
         err.Show()
     End Sub
 
-    Private Sub FadingForm()
-        Dim iCount As Integer
 
-
-        For iCount = 90 To 10 Step -10
-
-
-            Me.Opacity = iCount / 100
-
-
-            Me.Refresh()
-
-
-            Threading.Thread.Sleep(25)
-
-
-        Next
-
-
-        Me.Hide()
-
-
-    End Sub
 End Class

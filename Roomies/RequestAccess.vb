@@ -26,6 +26,9 @@ Public Class RequestAccess
 
         Dim req As New UserManager()
         req.ReqRecieved = userName
-        Console.WriteLine(userName)
+        Dim regHome = New Home()
+        regHome.Location = New Point((My.Computer.Screen.Bounds.Size.Width / 2) - (Me.Width / 2) + 500, (My.Computer.Screen.Bounds.Size.Height / 2) - (Me.Height / 2) - 20)
+        regHome.Show()
+        Me.Hide()
     End Sub
 End Class
